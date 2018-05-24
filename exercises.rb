@@ -97,4 +97,23 @@ ages.each do |age|
 end
 
 # Q2
-puts ages.max
+puts "Max age is #{ages.max}"
+
+# Q3 ****** Another way?
+count = 0
+heads_tails.each do |coin|
+  if coin == "heads"
+    count += 1
+  end
+end
+puts "heads was flipped #{count} times."
+
+# Q4
+puts "\n\nQ4"
+live_music.delete_at(2)
+puts live_music
+
+# Q5
+puts "\n\nQ5"
+city_pop[:la] = 4100000
+puts city_pop
