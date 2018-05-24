@@ -20,10 +20,12 @@ city_pop = {
   :nyc => 8538000,
   :la => 3976000
 }
-sibling_age = {
-  :meg => 32,
-  :adam => 29,
-  :hamed => 28
+fam_age = {
+  "Meg" => 32,
+  "Adam" => 29,
+  "Hamed" => 28,
+  "Karen" => 60,
+  "Bob" => 63
 }
 
 # Exercise 1
@@ -109,11 +111,42 @@ end
 puts "heads was flipped #{count} times."
 
 # Q4
-puts "\n\nQ4"
 live_music.delete_at(2)
 puts live_music
 
 # Q5
-puts "\n\nQ5"
 city_pop[:la] = 4100000
 puts city_pop
+
+# Exercise 5
+
+# Q1
+total_pop = 0
+city_pop.each do |city, popu|
+  total_pop += popu
+end
+puts "Total population is #{total_pop}"
+
+# Q2
+fam_age.each do |person, age|
+  if age > 40
+    puts "Sorry #{person}, you are old."
+  else
+    puts "Woo! You are young #{person}!"
+  end
+end
+
+# Q3
+# puts "my last two favorite colours: #{fav_colors[-2..-1]}"
+puts fav_colors[-2..-1]
+
+# Q4
+ages.map! do |age|
+  age + 1
+end
+puts ages
+
+# Q5
+# fav_colors.push("grey", "light-blue")
+fav_colors << ("grey", "light-blue")
+puts fav_colors
