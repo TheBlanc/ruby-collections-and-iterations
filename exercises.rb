@@ -42,3 +42,22 @@ ages.push(0)
 
 # Q5
 puts movie_dates[:wreck_it_ralph]
+
+# Exercise 2
+
+# Q1
+puts fav_colors[-1]
+
+# Q2
+city_pop[:atlanta] = 472522
+
+#Q3
+heads_tails = heads_tails.reverse
+
+# Q4
+puts city_pop[:toronto]
+
+#Q5
+puts "I enjoy coding to #{live_music[0]}."
+puts "#{live_music[1]} is the hometown hero."
+puts "#{live_music[2]}? Ohh yayaya."
