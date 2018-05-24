@@ -1,0 +1,5 @@
+fav_colors = ["red", "blue", "yellow", "orange"]
+ages = [29, 32, 33, 65, 27]
+heads_tails = ["heads", "tails", "heads", "heads", "tails"]
+live_music = ["Ander Paak", "Daniel Ceaser", "Jamie XX"]
+fav_colors2 = [:red, :blue, :yellow, :orange]
