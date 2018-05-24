@@ -11,9 +11,9 @@ dictionary = {
   :computer => "The thing you are looking at"
 }
 movie_dates = {
-  :jaws => 1975,
-  :wreck_it_ralph => 2012,
-  :gone_Girl => 2014
+  "Jaws" => 1975,
+  "Wreck It Ralph" => 2012,
+  "Gone Girl" => 2014
 }
 city_pop = {
   :toronto => 5928040,
@@ -58,6 +58,43 @@ heads_tails = heads_tails.reverse
 puts city_pop[:toronto]
 
 #Q5
-puts "I enjoy coding to #{live_music[0]}."
-puts "#{live_music[1]} is the hometown hero."
-puts "#{live_music[2]}? Ohh yayaya."
+live_music.each do |artist|
+  puts "I think #{artist} is great!"
+end
+
+# Exercise 3
+
+#Q1
+puts live_music[1..2]
+
+#Q2
+movie_dates.each do |movie, date|
+  puts "#{movie} came out in #{date}"
+end
+
+#Q3
+puts ages = ages.sort.reverse
+
+#Q4 *****HELP
+movie_dates["Beauty and the Beast"] = [1999, 2017]
+
+movie_dates.each do |movie, date|
+  puts "#{movie} came out in #{date}"
+end
+
+# movie_dates["Beauty and the Beast"] do |movie, date|
+#   puts "#{movie} came out in #{date}"
+# end
+
+
+# Exercise 4
+
+# Q1
+ages.each do |age|
+  if age < 30
+    puts age
+  end
+end
+
+# Q2
+puts ages.max
