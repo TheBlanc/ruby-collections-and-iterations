@@ -232,3 +232,53 @@ countries.map do |country|
 end
 puts "\nSome countries = #{countries}"
 puts "Some countries that are not an Island = #{not_island}"
+
+# Exercise 8 ***** HELP!
+
+expenses = [250, 7.95, 30.95, 16.50]
+
+# Option 1
+# expenses_total = 0
+# expenses.each do |cost|
+#   expenses_total += cost
+# end
+# puts "Total = #{expenses_total}"
+
+# Option 2
+expenses_total = expenses.sum
+puts "Total = #{expenses_total}"
+
+
+
+# WHY NOT?
+# expenses_total = 0
+# def expenses_sum(list)
+#   list.each do |cost|
+#     expenses_total += cost
+#   end
+#   return expenses_total
+# end
+#
+# puts expenses_sum(expenses)
+
+
+# Put Into Method
+# def sum_array(list)
+#   return list.sum
+# end
+expenses1 = [300, 9.99, 334.95, 1.50]
+expenses2 = [20, 7.95, 10.95, 11.50]
+expenses3 = [220, 75, 32.95, 12.50]
+
+
+def expenses_sum(list)
+  expenses_total = 0
+  list.each do |cost|
+    expenses_total += cost
+  end
+  return expenses_total
+end
+
+puts "Total expenses1 = #{expenses_sum(expenses1)}"
+puts "Total expenses2 = #{expenses_sum(expenses2)}"
+puts "Total expenses3 = #{expenses_sum(expenses3)}"
