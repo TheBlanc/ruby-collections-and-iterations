@@ -185,4 +185,50 @@ countries = [
     continent: "Europe",
     island: false
 }]
-puts countries[0]
+puts countries
+
+# Exercise 7
+
+# Q1
+20.times do
+  puts "I will not skateboard in the halls"
+end
+
+# Q2
+detention = []
+20.times do |num|
+  detention[num] = "I will not skateboard in the halls"
+end
+print detention
+
+# Q3
+numberz = []
+50.times do |num|
+  numberz[num] = num + 1
+end
+puts "\n"
+print numberz
+
+# Q4
+total = 0
+numberz.each do |num|
+  total += num
+end
+puts "\nThe total = #{total}"
+
+# Q5
+tripple = []
+50.times do |num|
+  tripple.push(num+1, num+1, num+1)
+end
+print tripple
+
+# Q6
+not_island = []
+countries.map do |country|
+  if country[:island] == false
+    not_island.push(country)
+  end
+end
+puts "\nSome countries = #{countries}"
+puts "Some countries that are not an Island = #{not_island}"
