@@ -215,7 +215,7 @@ numberz.each do |num|
   total += num
 end
 puts "\nThe total = #{total}"
-
+puts numberz.sum
 # Q5
 tripple = []
 50.times do |num|
@@ -223,7 +223,7 @@ tripple = []
 end
 print tripple
 
-# Q6
+# # Q6
 not_island = []
 countries.map do |country|
   if country[:island] == false
@@ -232,40 +232,40 @@ countries.map do |country|
 end
 puts "\nSome countries = #{countries}"
 puts "Some countries that are not an Island = #{not_island}"
-
-# Exercise 8 ***** HELP!
-
-expenses = [250, 7.95, 30.95, 16.50]
-
-# Option 1
-# expenses_total = 0
-# expenses.each do |cost|
-#   expenses_total += cost
-# end
-# puts "Total = #{expenses_total}"
-
-# Option 2
-expenses_total = expenses.sum
-puts "Total = #{expenses_total}"
-
-
-
-# WHY NOT?
-# expenses_total = 0
-# def expenses_sum(list)
-#   list.each do |cost|
-#     expenses_total += cost
-#   end
-#   return expenses_total
-# end
 #
-# puts expenses_sum(expenses)
-
-
-# Put Into Method
-# def sum_array(list)
-#   return list.sum
-# end
+# # Exercise 8 ***** HELP!
+#
+# expenses = [250, 7.95, 30.95, 16.50]
+#
+# # Option 1
+# # expenses_total = 0
+# # expenses.each do |cost|
+# #   expenses_total += cost
+# # end
+# # puts "Total = #{expenses_total}"
+#
+# # Option 2
+# expenses_total = expenses.sum
+# puts "Total = #{expenses_total}"
+#
+#
+#
+# # WHY NOT?
+# # expenses_total = 0
+# # def expenses_sum(list)
+# #   list.each do |cost|
+# #     expenses_total += cost
+# #   end
+# #   return expenses_total
+# # end
+# #
+# # puts expenses_sum(expenses)
+#
+#
+# # Put Into Method
+# # def sum_array(list)
+# #   return list.sum
+# # end
 expenses1 = [300, 9.99, 334.95, 1.50]
 expenses2 = [20, 7.95, 10.95, 11.50]
 expenses3 = [220, 75, 32.95, 12.50]
@@ -282,3 +282,54 @@ end
 puts "Total expenses1 = #{expenses_sum(expenses1)}"
 puts "Total expenses2 = #{expenses_sum(expenses2)}"
 puts "Total expenses3 = #{expenses_sum(expenses3)}"
+
+# Exercise 8
+
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+
+# Q1
+grocery_list.push("bananas")
+grocery_list << "rice"
+def star_print_array(array)
+  list = ""
+  array.each do |item|
+    list += "* #{item}\n"
+  end
+  return list
+end
+
+puts star_print_array(grocery_list)
+
+# Q2
+puts "You have to pickup #{grocery_list.length} items."
+
+# Q3
+def bananas?(array)
+    if array.include?("bananas")
+      puts "You need to pickup bananas!"
+    else
+      puts "You do not need bananas today."
+    end
+end
+
+puts bananas?(grocery_list)
+
+# Q4
+puts "second item: #{grocery_list[1]}"
+
+# Q5
+def star_print_array(array)
+  list = ""
+  array.sort.each do |item|
+    list += "* #{item}\n"
+  end
+  return list
+end
+
+puts star_print_array(grocery_list)
+
+# Q6
+grocery_list.delete('salmon')
+
+puts "\n\nnew list:"
+puts star_print_array(grocery_list)
