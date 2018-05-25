@@ -147,6 +147,42 @@ end
 puts ages
 
 # Q5
-# fav_colors.push("grey", "light-blue")
-fav_colors << ("grey", "light-blue")
+fav_colors.push("grey", "light-blue")
 puts fav_colors
+
+
+# Exercise 6
+
+# Q1
+movie_dates2 = {
+  "1999": ["The Matrix", "Star Wars: Episode 1", "The Mummy"],
+  "2009": ["Avatar", "Star Trek", "District 9"],
+  "2019": ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]
+}
+puts movie_dates2
+
+# Q2
+phone = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  ["*", 0, "#"]
+]
+puts phone
+
+#Q3
+countries = [
+  canada = {
+    name: "Canada",
+    continent: "North-America",
+    island: false
+}, cuba = {
+    name: "Cuba",
+    continent: "North-America",
+    island: true
+}, france = {
+    name: "France",
+    continent: "Europe",
+    island: false
+}]
+puts countries[0]
