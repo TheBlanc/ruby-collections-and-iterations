@@ -202,12 +202,16 @@ end
 print detention
 
 # Q3
-numberz = []
-50.times do |num|
-  numberz[num] = num + 1
-end
+# numberz = []
+# 50.times do |num|
+#   numberz[num] = num + 1
+# end
+
+numberz = Array (1..50)
 puts "\n"
+puts numberz.class
 print numberz
+
 
 # Q4
 total = 0
@@ -216,6 +220,7 @@ numberz.each do |num|
 end
 puts "\nThe total = #{total}"
 puts numberz.sum
+
 # Q5
 tripple = []
 50.times do |num|
@@ -225,7 +230,7 @@ print tripple
 
 # # Q6
 not_island = []
-countries.map do |country|
+countries.each do |country|
   if country[:island] == false
     not_island.push(country)
   end
